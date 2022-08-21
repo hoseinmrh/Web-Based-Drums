@@ -82,3 +82,7 @@ footer {
   margin: 10px;
   background-color: white;
 }
+
+.drum:hover{
+  border: 10px solid gray;
+}
