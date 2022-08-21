@@ -49,17 +49,30 @@ for(var i = 0; i < document.querySelectorAll(".drum").length ; i++){
 
   document.querySelectorAll(".drum")[i].addEventListener("click", function (){
 
-    // Set image size to 1.1 times original
-    this.style.transform = "scale(1.1)";
-// Animation effect
-    this.style.transition = "transform 0.15s ease";
-    // Animation effect
-    setTimeout(backToNormal, 150, this);
+//     // Set image size to 1.1 times original
+//     this.style.transform = "scale(1.1)";
+// // Animation effect
+//     this.style.transition = "transform 0.15s ease";
+//     // Animation effect
+//     setTimeout(backToNormal, 150, this);
     var buttonInnerHTML = this.innerHTML;
     playSound(buttonInnerHTML);
+    pressAnimation(buttonInnerHTML);
   });
 }
 
 document.addEventListener("keypress", function(event){
   playSound(event.key);
+  pressAnimation(event.key);
 });
+
+function pressAnimation(currentKey){
+  var activeButton = document.querySelector("." + currentKey);
+  activeButton.classList.add("pressed");
+  activeButton.classList.add("makeBigger");
+
+  setTimeout(function(){
+    activeButton.classList.remove("pressed");
+    activeButton.classList.remove("makeBigger");
+  },150);
+}
