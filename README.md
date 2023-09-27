@@ -12,6 +12,7 @@ You can click buttons or you can press keyboard
 
 <p align="center">
 		![photo 1](https://github.com/hoseinmrh/Web-Based-Drums/assets/97128486/91693455-0b74-4316-9728-57d7361c99ec)
+	<img src="https://github.com/hoseinmrh/Web-Based-Drums/assets/97128486/91693455-0b74-4316-9728-57d7361c99ec" />
 </p>
 
 #
